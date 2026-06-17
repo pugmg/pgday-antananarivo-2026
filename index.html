@@ -686,7 +686,33 @@
       color: var(--text-muted);
       font-weight: 500;
     }
+    
+/* PROGRAMME TIMELINE */
+.programme-item {
+    position: relative;
+    padding-left: 20px;
+}
 
+.programme-item::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    bottom: -20px;
+    width: 3px;
+    background: #e5e7eb;
+    border-radius: 9999px;
+}
+
+.programme-item:last-child::before {
+    display: none;
+}
+
+.tag-pause { background: #f3f4f6; color: #4b5563; }
+.tag-opening { background: #dbeafe; color: #1e40af; }
+.tag-talk { background: #e0f2fe; color: #0369a1; }
+.tag-networking { background: #fef3c7; color: #92400e; }
+.tag-closing { background: #ecfdf5; color: #065f46; }
     /* MEMBRES */
     .members-group {
       margin-top: 3rem;
