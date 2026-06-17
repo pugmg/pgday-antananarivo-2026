@@ -1243,7 +1243,43 @@
       font-size: 1.2rem;
       line-height: 1;
     }
+.coc-official-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 1.5rem;
+  padding: 1.1rem 1.4rem;
+  background: var(--pg-blue-light);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: var(--transition);
+}
 
+.coc-official-link:hover {
+  background: white;
+  border-color: var(--pg-blue);
+  box-shadow: var(--shadow);
+  transform: translateX(4px);
+}
+
+.coc-official-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.coc-official-text strong {
+  display: block;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.95rem;
+  color: var(--pg-blue-dark);
+  margin-bottom: 2px;
+}
+
+.coc-official-text small {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
     .coc-contact {
       margin-top: 2rem;
       padding: 1.5rem;
@@ -1674,27 +1710,37 @@
   </section>
 
   <!-- CODE DE BONNE CONDUITE (section dédiée conservée) -->
-  <section id="code-de-conduite">
-    <div class="container">
-      <div class="animate-on-scroll">
-        <div class="section-label">Respect & Inclusion</div>
-        <h2 class="section-title" id="coc-title">Code de bonne conduite</h2>
-        <div class="section-divider"></div>
-        <p class="section-lead" id="coc-text">Chargement...</p>
+<section id="code-de-conduite">
+  <div class="container">
+    <div class="animate-on-scroll">
+      <div class="section-label">Respect & Inclusion</div>
+      <h2 class="section-title" id="coc-title">Code de bonne conduite</h2>
+      <div class="section-divider"></div>
+      <p class="section-lead" id="coc-text">Chargement...</p>
 
-        <div class="coc-box">
-          <ul class="coc-points" id="coc-points"></ul>
-          <div class="coc-contact">
-            <strong style="color: var(--pg-blue-dark);">Signalement :</strong>
-            <span style="color: var(--text-secondary);">En cas de problème, contactez un organisateur sur place ou
-              écrivez à </span>
-            <a id="coc-contact" href="mailto:"
-              style="color: var(--pg-blue); font-weight: 600;">postgresusermg@gmail.com</a>
-          </div>
+      <div class="coc-box">
+        <ul class="coc-points" id="coc-points"></ul>
+
+        <a href="https://www.postgresql.org/about/policies/coc/fr/" target="_blank" rel="noopener noreferrer"
+          class="coc-official-link">
+          <span class="coc-official-icon">📜</span>
+          <span class="coc-official-text">
+            <strong>Code de Conduite officiel PostgreSQL</strong>
+            <small>Lire le texte complet sur postgresql.org →</small>
+          </span>
+        </a>
+
+        <div class="coc-contact">
+          <strong style="color: var(--pg-blue-dark);">Signalement :</strong>
+          <span style="color: var(--text-secondary);">En cas de problème, contactez un organisateur sur place ou
+            écrivez à </span>
+          <a id="coc-contact" href="mailto:"
+            style="color: var(--pg-blue); font-weight: 600;">postgresusermg@gmail.com</a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- FOOTER -->
   <footer>
